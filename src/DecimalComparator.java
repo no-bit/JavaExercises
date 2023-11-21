@@ -7,3 +7,4 @@ public class DecimalComparator {
         return (Math.abs(firstNumber - secondNumber) < 0.0009999999999998);
     }
 }
+
