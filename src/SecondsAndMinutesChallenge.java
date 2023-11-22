@@ -13,7 +13,7 @@ public class SecondsAndMinutesChallenge {
     }
     public static String getDurationString(int minutes, int seconds) {
         if ((minutes < 0) || (seconds < 0) || (seconds > 59))
-                return "invalid value";
+            return "invalid value";
         int hours = minutes / 60;
         int minute = (minutes % 60);
         return hours + "h " + minute + "m " + seconds + "s";
