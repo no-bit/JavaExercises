@@ -16,21 +16,18 @@ public class NumberOfDaysInMonth {
     }
     public static int getDaysInMonth(int month, int year){
         if (month < 13 && month > 0 && year < 10000 && year > 0){
-            switch (month) {
-                case 1, 3, 5, 7, 8, 10, 12 -> {
-                    return 31;
-                }
+            return switch (month) {
+                case 1, 3, 5, 7, 8, 10, 12 -> 31;
                 case 2 -> {
                     if (!isLeapYear(year)) {
-                        return 28;
+                        yield 28;
                     } else {
-                        return 29;
+                        yield 29;
                     }
                 }
-                case 4, 6, 9, 11 -> {
-                    return 30;
-                }
-            }
+                case 4, 6, 9, 11 -> 30;
+                default -> -1;
+            };
         }
         return -1;}
 }
