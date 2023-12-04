@@ -33,4 +33,5 @@ public class ComplexNumber {
         real -= complexNumber.real;
         imaginary -= complexNumber.imaginary;
     }
+
 }
