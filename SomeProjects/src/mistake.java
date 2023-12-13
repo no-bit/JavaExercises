@@ -1,11 +1,9 @@
-public class Printer {
-    public static void main(String[] args) {
-        Printer printer = new Printer(44, 66, true);
-        System.out.println(printer.printPages(23));
-    }
+public class mistake {
+
     private int tonerLevel;
     private int pagesPrinted;
     private boolean duplex;
+
 
     public int addToner(int tonerAmount){
         if (tonerAmount < 0){
@@ -29,12 +27,19 @@ public class Printer {
         } else {
             pagesPrinted += pages;
         }
-        return pagesPrinted;
+        return pages;
     }
 
-    public Printer(int tonerLevel, int pagesPrinted, boolean duplex){
-        this.tonerLevel = tonerLevel;
-        this.pagesPrinted = pagesPrinted;
+    public int getPagesPrinted(){
+        return pagesPrinted;
+    }
+    public mistake(int tonerLevel, boolean duplex){
+        if (tonerLevel < 0 || tonerLevel > 100){
+            this.tonerLevel = -1;
+        } else {
+            this.tonerLevel = tonerLevel;
+        }
         this.duplex = duplex;
     }
 }
+//got a small mistake in this code will look on later
